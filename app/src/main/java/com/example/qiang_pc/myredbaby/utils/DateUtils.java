@@ -86,5 +86,15 @@ public class DateUtils {
         return sdf.format(date);
     }
 
+    /**
+     * 获取时间戳
+     * @return
+     */
+    public static String getTimestamp(){
+        SimpleDateFormat formt = new SimpleDateFormat("yyyyMMddHHmmss");
+        Date date = new Date(System.currentTimeMillis());
+        return formt.format(date);
+    }
+
 
 }

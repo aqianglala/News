@@ -4,13 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
+    tools:context="com.example.qiang_pc.myredbaby.activity.DetailActivity">
 
-    <include
-        layout="@layout/app_bar_main"
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"></WebView>
 
-    <include
-        layout="@layout/layout_error"/>
 </RelativeLayout>

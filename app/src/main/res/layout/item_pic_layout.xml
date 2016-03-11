@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+            android:padding="30px">
+
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_width="217px"
+        android:layout_height="154px"
+        android:layout_marginRight="30px"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试测试测试测试测试测试测试测试测试测试测试测试测试"
+            android:maxLines="2"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试测试测试测试测试测试测试测试测试测试测试测试测试"
+            android:maxLines="1"/>
+    </LinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
