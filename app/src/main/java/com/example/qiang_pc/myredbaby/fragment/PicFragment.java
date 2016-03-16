@@ -21,7 +21,7 @@ import com.zhy.http.okhttp.callback.Callback;
 import java.net.URLEncoder;
 import java.util.List;
 
-import cn.bingoogolapple.refreshlayout.BGAMoocStyleRefreshViewHolder;
+import cn.bingoogolapple.refreshlayout.BGANormalRefreshViewHolder;
 import cn.bingoogolapple.refreshlayout.BGARefreshLayout;
 import okhttp3.Call;
 import okhttp3.Response;
@@ -146,12 +146,18 @@ public class PicFragment extends BaseFragment  implements BGARefreshLayout
     }
 
     private void initRefreshViewHolder() {
-        BGAMoocStyleRefreshViewHolder moocStyleRefreshViewHolder = new
-                BGAMoocStyleRefreshViewHolder(getActivity(), true);
-        moocStyleRefreshViewHolder.setUltimateColor(R.color.colorPrimary);
-        moocStyleRefreshViewHolder.setOriginalImage(R.mipmap.talkpal_logo);
-        moocStyleRefreshViewHolder.setSpringDistanceScale(0.2f);
-        mRefreshLayout.setRefreshViewHolder(moocStyleRefreshViewHolder);
+//        BGAMoocStyleRefreshViewHolder moocStyleRefreshViewHolder = new
+//                BGAMoocStyleRefreshViewHolder(getActivity(), true);
+        BGANormalRefreshViewHolder bgaNormalRefreshViewHolder = new BGANormalRefreshViewHolder
+                (getActivity(), true);
+//        bgaNormalRefreshViewHolder.setPullDownRefreshText("松开加载更多");
+//        bgaNormalRefreshViewHolder.setRefreshingText("加载中...");
+//        bgaNormalRefreshViewHolder.setReleaseRefreshText("加载中...");
+        bgaNormalRefreshViewHolder.setLoadingMoreText("加载中...");
+//        moocStyleRefreshViewHolder.setUltimateColor(R.color.colorPrimary);
+//        moocStyleRefreshViewHolder.setOriginalImage(R.mipmap.talkpal_logo);
+//        moocStyleRefreshViewHolder.setSpringDistanceScale(0.2f);
+        mRefreshLayout.setRefreshViewHolder(bgaNormalRefreshViewHolder);
     }
 
     public void stopWait(){
